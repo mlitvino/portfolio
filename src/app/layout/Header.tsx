@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router'
 
+import { ThemeToggle } from '@/features/theme'
 import { site } from '@/shared/config/site'
 
 import styles from './Header.module.css'
@@ -17,18 +18,21 @@ export function Header() {
       <Link to="/" className={styles.logo}>
         {site.name}
       </Link>
-      <nav aria-label="Main" className={styles.nav}>
-        {navItems.map(({ to, label }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={to === '/'}
-            className={({ isActive }) => (isActive ? styles.active : undefined)}
-          >
-            {label}
-          </NavLink>
-        ))}
-      </nav>
+      <div className={styles.actions}>
+        <nav aria-label="Main" className={styles.nav}>
+          {navItems.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              className={({ isActive }) => (isActive ? styles.active : undefined)}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+        <ThemeToggle />
+      </div>
     </header>
   )
 }

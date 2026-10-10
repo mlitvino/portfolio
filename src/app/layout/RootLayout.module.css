@@ -4,8 +4,8 @@
   left: 1rem;
   z-index: 100;
   padding: 0.5rem 1rem;
-  background: Canvas;
-  color: CanvasText;
+  background: var(--color-bg);
+  color: var(--color-text);
   border: 2px solid currentColor;
   border-radius: 4px;
   transform: translateY(-200%);

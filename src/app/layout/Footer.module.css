@@ -1,5 +1,5 @@
 .footer {
   padding: 0.5rem 1rem;
   text-align: center;
-  border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-top: 1px solid var(--color-border);
 }

@@ -43,6 +43,10 @@ export default defineConfig([
       '@eslint-react/unsupported-syntax': 'off',
       '@eslint-react/use-memo': 'off',
 
+      // React Compiler memoizes these automatically
+      '@eslint-react/no-unstable-context-value': 'off',
+      '@eslint-react/no-unstable-default-props': 'off',
+
       '@eslint-react/jsx-no-useless-fragment': 'error',
 
       'simple-import-sort/imports': 'error',

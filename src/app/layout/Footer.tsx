@@ -7,7 +7,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <p>
         © {new Date().getFullYear()} {site.name} <br />
-        cake is lie
+        the cake is a lie
       </p>
     </footer>
   )
