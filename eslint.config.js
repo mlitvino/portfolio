@@ -1,7 +1,7 @@
 import js from '@eslint/js'
+import eslintReact from '@eslint-react/eslint-plugin'
 import globals from 'globals'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
@@ -16,8 +16,7 @@ export default defineConfig([
       js.configs.recommended,
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
-      react.configs.flat.recommended,
-      react.configs.flat['jsx-runtime'],
+      eslintReact.configs['strict-type-checked'],
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
       jsxA11y.flatConfigs.recommended,
@@ -32,20 +31,19 @@ export default defineConfig([
         tsconfigRootDir: import.meta.dirname,
       },
     },
-    settings: {
-      react: { version: '19.2' },
-    },
     rules: {
-      'react/prop-types': 'off',
-      'react/jsx-no-undef': 'off',
-      'react/jsx-no-duplicate-props': 'off',
-      'react/no-unknown-property': 'off',
-      'react/display-name': 'off',
+      // Hook rules come from the official eslint-plugin-react-hooks
+      '@eslint-react/error-boundaries': 'off',
+      '@eslint-react/exhaustive-deps': 'off',
+      '@eslint-react/purity': 'off',
+      '@eslint-react/rules-of-hooks': 'off',
+      '@eslint-react/set-state-in-effect': 'off',
+      '@eslint-react/set-state-in-render': 'off',
+      '@eslint-react/static-components': 'off',
+      '@eslint-react/unsupported-syntax': 'off',
+      '@eslint-react/use-memo': 'off',
 
-      'react/jsx-key': ['error', { checkFragmentShorthand: true }],
-      'react/no-array-index-key': 'warn',
-      'react/self-closing-comp': 'error',
-      'react/jsx-no-useless-fragment': 'error',
+      '@eslint-react/jsx-no-useless-fragment': 'error',
 
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
