@@ -1,6 +1,8 @@
+import styles from './Footer.module.css'
+
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <p>© {new Date().getFullYear()} Misha</p>
     </footer>
   )

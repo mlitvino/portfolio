@@ -14,48 +14,11 @@ body {
   flex-direction: column;
 }
 
-.skip-link {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 100;
-  padding: 0.5rem 1rem;
-  background: Canvas;
-  color: CanvasText;
-  border: 2px solid currentColor;
-  border-radius: 4px;
-  transform: translateY(-200%);
-}
-
-.skip-link:focus {
-  transform: none;
-}
-
-main:focus {
-  outline: none;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.header nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.header a.active {
-  font-weight: 600;
-}
-
 main {
   flex: 1;
   padding: 2rem;
 }
 
-.footer {
-  padding: 1rem 2rem;
+main:focus {
+  outline: none;
 }
