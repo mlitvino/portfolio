@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <p>
-        © {new Date().getFullYear()} {site.name} <br/>
+        © {new Date().getFullYear()} {site.name} <br />
         cake is lie
       </p>
     </footer>

@@ -4,14 +4,30 @@ import { site } from '@/shared/config/site'
 
 import styles from './Header.module.css'
 
+const navItems = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About me' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/contact', label: 'Contact' },
+]
+
 export function Header() {
   return (
     <header className={styles.header}>
-      <Link to="/">{site.name}</Link>
+      <Link to="/" className={styles.logo}>
+        {site.name}
+      </Link>
       <nav aria-label="Main" className={styles.nav}>
-        <NavLink to="/" end className={({ isActive }) => (isActive ? styles.active : undefined)}>
-          Home
-        </NavLink>
+        {navItems.map(({ to, label }) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={to === '/'}
+            className={({ isActive }) => (isActive ? styles.active : undefined)}
+          >
+            {label}
+          </NavLink>
+        ))}
       </nav>
     </header>
   )
