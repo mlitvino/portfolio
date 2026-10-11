@@ -1,4 +1,4 @@
-import { ProjectCard, projects } from '@/features/projects'
+import { ProjectGrid, projects } from '@/features/projects'
 import { site } from '@/shared/config/site'
 
 import styles from './ProjectsPage.module.css'
@@ -13,15 +13,7 @@ export default function ProjectsPage() {
 
       {projects.length === 0
         ? <p className={styles.empty}>No projects yet.</p>
-        : (
-          <ul className={styles.grid}>
-            {projects.map((project) => (
-              <li key={project.slug}>
-                <ProjectCard project={project} />
-              </li>
-            ))}
-          </ul>
-        )}
+        : <ProjectGrid projects={projects} />}
     </>
   )
 }

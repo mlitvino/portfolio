@@ -9,4 +9,5 @@ export default {
   links: {
     repo: 'https://github.com/mlitvino/minishell',
   },
+  featured: true,
 } satisfies ProjectData
