@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   return (
     <>
       <title>{`Projects — ${site.name}`}</title>
-  
+
       <h1 className={styles.heading}>Projects</h1>
       <hr className={styles.separator} />
 
