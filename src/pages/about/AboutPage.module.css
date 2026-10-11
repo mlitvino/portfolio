@@ -1,0 +1,183 @@
+.page {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+}
+
+.separator {
+  width: 4rem;
+  margin: 0.75rem auto 2rem;
+  border: none;
+  border-top: 2px solid var(--color-accent);
+}
+
+.summary {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+}
+
+.cvButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Sections */
+
+.section {
+  padding-top: 2.5rem;
+}
+
+.sectionHeading {
+  margin: 0 0 1.25rem;
+  font-size: 1.375rem;
+}
+
+/* Timeline (experience, education) */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  list-style: none;
+  border-left: 2px solid var(--color-border);
+}
+
+.timeline > li {
+  position: relative;
+}
+
+.timeline > li::before {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  left: calc(-1.5rem - 6px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.entryHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+
+.entryTitle {
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.entryDates,
+.entryMeta {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+}
+
+.highlights {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.details {
+  margin: 0;
+}
+
+/* Tags (tech, skills, hobbies) */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.tags li {
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+/* Skills */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+}
+
+.skillLabel {
+  font-weight: 600;
+}
+
+.skillItems {
+  margin: 0;
+}
+
+@media (max-width: 30rem) {
+  .skillRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Languages and hobbies side by side */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 0 2rem;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.languageName {
+  font-weight: 600;
+}
+
+.languageLevel {
+  margin: 0;
+  color: var(--color-muted);
+}
