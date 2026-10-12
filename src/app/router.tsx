@@ -19,6 +19,7 @@ export const router = createBrowserRouter(
         { path: 'about', Component: AboutPage },
         { path: 'projects', Component: ProjectsPage },
         { path: 'contact', Component: ContactPage },
+        { path: 'error', Component: RootErrorBoundary },
         { path: '*', Component: NotFoundPage },
       ],
     },
