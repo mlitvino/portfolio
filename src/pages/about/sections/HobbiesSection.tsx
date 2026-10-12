@@ -1,3 +1,5 @@
+import { TagList } from '@/shared/ui/TagList'
+
 import styles from '../AboutPage.module.css'
 
 interface HobbiesSectionProps {
@@ -13,13 +15,7 @@ export function HobbiesSection({ hobbies }: HobbiesSectionProps) {
         Hobbies
       </h2>
 
-      <ul className={styles.tags}>
-        {hobbies.map((hobby) => (
-          <li key={hobby}>
-            {hobby}
-          </li>
-        ))}
-      </ul>
+      <TagList items={hobbies} />
     </section>
   )
 }

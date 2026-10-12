@@ -1,4 +1,5 @@
 import buttonStyles from '@/shared/ui/button.module.css'
+import { ExternalLink } from '@/shared/ui/ExternalLink'
 
 import styles from './ContactPage.module.css'
 import { CopyButton } from './CopyButton'
@@ -18,6 +19,13 @@ export function ContactCard({
   href,
   external,
 }: ContactCardProps) {
+  const openText = (
+    <>
+      Open
+      <span className="sr-only">{` ${label}`}</span>
+    </>
+  )
+
   return (
     <div className={styles.card}>
       <h2 className={styles.cardLabel}>{label}</h2>
@@ -26,16 +34,17 @@ export function ContactCard({
       <div className={styles.cardActions}>
         <CopyButton value={copyValue} label={label} />
 
-        <a
-          href={href}
-          className={buttonStyles.button}
-          data-variant="primary"
-          target={external ? '_blank' : undefined}
-          rel={external ? 'noreferrer noopener' : undefined}
-        >
-          Open
-          <span className={styles.srOnly}>{` ${label}`}</span>
-        </a>
+        {external
+          ? (
+            <ExternalLink href={href} className={buttonStyles.button} data-variant="primary">
+              {openText}
+            </ExternalLink>
+          )
+          : (
+            <a href={href} className={buttonStyles.button} data-variant="primary">
+              {openText}
+            </a>
+          )}
       </div>
     </div>
   )

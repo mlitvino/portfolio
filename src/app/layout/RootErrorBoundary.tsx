@@ -1,7 +1,7 @@
 import { isRouteErrorResponse, useRouteError } from 'react-router'
 
-import { siteConfig } from '@/shared/config/site'
 import buttonStyles from '@/shared/ui/button.module.css'
+import { pageTitle } from '@/shared/utils/pageTitle'
 
 export function RootErrorBoundary() {
   const error = useRouteError()
@@ -15,7 +15,7 @@ export function RootErrorBoundary() {
 
   return (
     <main id="content">
-      <title>{`Something went wrong — ${siteConfig.name}`}</title>
+      <title>{pageTitle('Something went wrong')}</title>
       <h1>Something went wrong</h1>
       <p>
         Try reloading the page. If you opened an old tab, a new version may have been published.

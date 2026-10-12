@@ -1,5 +1,5 @@
 import { resume } from '@/content/resume'
-import { siteConfig } from '@/shared/config/site'
+import { pageTitle } from '@/shared/utils/pageTitle'
 
 import styles from './AboutPage.module.css'
 import { AboutHeader } from './sections/AboutHeader'
@@ -12,7 +12,7 @@ import { SkillsSection } from './sections/SkillsSection'
 export default function AboutPage() {
   return (
     <div className={styles.page}>
-      <title>{`About me — ${siteConfig.name}`}</title>
+      <title>{pageTitle('About me')}</title>
 
       <AboutHeader summary={resume.summary} cv={resume.cv} />
       <ExperienceSection items={resume.experience} />

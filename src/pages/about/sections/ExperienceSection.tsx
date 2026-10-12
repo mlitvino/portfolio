@@ -1,3 +1,5 @@
+import { TagList } from '@/shared/ui/TagList'
+
 import styles from '../AboutPage.module.css'
 import type { Experience } from '../types'
 import { TimelineItem } from './TimelineItem'
@@ -32,15 +34,7 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
                 ))}
               </ul>
 
-              {item.tech && (
-                <ul className={styles.tags} aria-label="Technologies">
-                  {item.tech.map((name) => (
-                    <li key={name}>
-                      {name}
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {item.tech && <TagList items={item.tech} label="Technologies" />}
             </TimelineItem>
           </li>
         ))}

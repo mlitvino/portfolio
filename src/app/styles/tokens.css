@@ -2,6 +2,7 @@
 [data-theme="light"] {
   color-scheme: light;
   --color-bg: #ffffff;
+  --color-surface: #f7f7f7;
   --color-text: #1a1a1a;
   --color-muted: #6b6b6b;
   --color-border: #e5e5e5;

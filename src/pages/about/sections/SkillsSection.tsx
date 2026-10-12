@@ -1,3 +1,5 @@
+import { TagList } from '@/shared/ui/TagList'
+
 import styles from '../AboutPage.module.css'
 import type { SkillGroup } from '../types'
 
@@ -20,13 +22,7 @@ export function SkillsSection({ groups }: SkillsSectionProps) {
             <dt className={styles.skillLabel}>{group.label}</dt>
 
             <dd className={styles.skillItems}>
-              <ul className={styles.tags}>
-                {group.items.map((item) => (
-                  <li key={item}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <TagList items={group.items} />
             </dd>
           </div>
         ))}

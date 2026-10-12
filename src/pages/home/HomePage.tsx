@@ -1,4 +1,4 @@
-import { siteConfig } from '@/shared/config/site'
+import { pageTitle } from '@/shared/utils/pageTitle'
 
 import { ContactCta } from './sections/ContactCta'
 import { FeaturedProjects } from './sections/FeaturedProjects'
@@ -7,7 +7,7 @@ import { Hero } from './sections/Hero'
 export default function HomePage() {
   return (
     <>
-      <title>{`${siteConfig.name} — ${siteConfig.title}`}</title>
+      <title>{pageTitle()}</title>
 
       <Hero />
       <FeaturedProjects />

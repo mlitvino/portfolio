@@ -1,5 +1,6 @@
 import { siteConfig } from '@/shared/config/site'
 import { PageHeader } from '@/shared/ui/PageHeader'
+import { pageTitle } from '@/shared/utils/pageTitle'
 
 import { ContactCard } from './ContactCard'
 import styles from './ContactPage.module.css'
@@ -28,7 +29,7 @@ const contacts = [
 export default function ContactPage() {
   return (
     <div className={styles.page}>
-      <title>{`Contact — ${siteConfig.name}`}</title>
+      <title>{pageTitle('Contact')}</title>
 
       <PageHeader title="Contact">
         <p className={styles.claim}>Let's build something together.</p>

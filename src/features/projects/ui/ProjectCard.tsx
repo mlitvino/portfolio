@@ -1,3 +1,6 @@
+import { ExternalLink } from '@/shared/ui/ExternalLink'
+import { TagList } from '@/shared/ui/TagList'
+
 import type { Project } from '../model/types'
 import styles from './ProjectCard.module.css'
 
@@ -15,26 +18,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.summary}>{summary}</p>
 
-      <ul className={styles.tags} aria-label="Technologies">
-        {tech.map((name) => (
-          <li key={name}>
-            {name}
-          </li>
-        ))}
-      </ul>
+      <TagList items={tech} label="Technologies" />
 
       <div className={styles.links}>
-        {links.live && (
-          <a href={links.live} target="_blank" rel="noreferrer noopener">
-            Live demo
-          </a>
-        )}
-
-        {links.repo && (
-          <a href={links.repo} target="_blank" rel="noreferrer noopener">
-            Source code
-          </a>
-        )}
+        {links.live && <ExternalLink href={links.live}>Live demo</ExternalLink>}
+        {links.repo && <ExternalLink href={links.repo}>Source code</ExternalLink>}
       </div>
     </article>
   )

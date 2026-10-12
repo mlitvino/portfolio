@@ -1,6 +1,6 @@
 import type { Project, ProjectData } from './types'
 
-const MAX_FAVORITES_PROJECTS = 3
+const MAX_FEATURED_PROJECTS = 3
 
 const modules = import.meta.glob<ProjectData>('/src/content/projects/*/project.ts', {
   eager: true,
@@ -22,7 +22,7 @@ export const projects: readonly Project[] = Object.entries(modules)
 
 export const featuredProjects = projects.filter((project) => project.featured).slice(
   0,
-  MAX_FAVORITES_PROJECTS,
+  MAX_FEATURED_PROJECTS,
 )
 
 export function getProjectBySlug(slug: string): Project | undefined {

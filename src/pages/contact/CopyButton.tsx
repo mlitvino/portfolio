@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 
 import buttonStyles from '@/shared/ui/button.module.css'
 
-import styles from './ContactPage.module.css'
-
 type Status = 'idle' | 'copied' | 'failed'
 
 const statusText: Record<Status, string> = {
@@ -49,7 +47,7 @@ export function CopyButton({ value, label }: CopyButtonProps) {
       onClick={() => void copy()}
     >
       {statusText[status]}
-      <span className={styles.srOnly}>{` ${label}`}</span>
+      <span className="sr-only">{` ${label}`}</span>
     </button>
   )
 }
