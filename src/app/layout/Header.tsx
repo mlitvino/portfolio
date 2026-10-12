@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router'
 
 import { ThemeToggle } from '@/features/theme'
-import { site } from '@/shared/config/site'
+import { siteConfig } from '@/shared/config/site'
 
 import styles from './Header.module.css'
 
@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        {site.name}
+        {siteConfig.name}
       </Link>
       <div className={styles.actions}>
         <nav aria-label="Main" className={styles.nav}>

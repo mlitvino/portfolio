@@ -1,4 +1,4 @@
-export const site = {
+export const siteConfig = {
   name: 'Mykhailo Litvinov',
   title: 'Software Developer',
   tagline:

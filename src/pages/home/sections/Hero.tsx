@@ -1,15 +1,15 @@
 import { Link } from 'react-router'
 
-import { site } from '@/shared/config/site'
+import { siteConfig } from '@/shared/config/site'
 
 import styles from '../HomePage.module.css'
 
 export function Hero() {
   return (
     <section className={styles.hero}>
-      <h1 className={styles.name}>{site.name}</h1>
-      <p className={styles.role}>{site.title}</p>
-      <p className={styles.tagline}>{site.tagline}</p>
+      <h1 className={styles.name}>{siteConfig.name}</h1>
+      <p className={styles.role}>{siteConfig.title}</p>
+      <p className={styles.tagline}>{siteConfig.tagline}</p>
 
       <div className={styles.actions}>
         <Link to="/projects" className={styles.primaryButton}>

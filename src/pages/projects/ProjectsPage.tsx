@@ -1,12 +1,12 @@
 import { ProjectGrid, projects } from '@/features/projects'
-import { site } from '@/shared/config/site'
+import { siteConfig } from '@/shared/config/site'
 
 import styles from './ProjectsPage.module.css'
 
 export default function ProjectsPage() {
   return (
     <>
-      <title>{`Projects — ${site.name}`}</title>
+      <title>{`Projects — ${siteConfig.name}`}</title>
 
       <h1 className={styles.heading}>Projects</h1>
       <hr className={styles.separator} />
