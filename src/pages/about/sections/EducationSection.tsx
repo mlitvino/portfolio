@@ -1,5 +1,6 @@
+import type { Education } from '@/content/resume.types'
+
 import styles from '../AboutPage.module.css'
-import type { Education } from '../types'
 import { TimelineItem } from './TimelineItem'
 
 interface EducationSectionProps {

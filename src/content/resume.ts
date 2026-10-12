@@ -1,4 +1,4 @@
-import type { Resume } from '@/pages/about/types'
+import type { Resume } from './resume.types'
 
 export const resume: Resume = {
   summary: [

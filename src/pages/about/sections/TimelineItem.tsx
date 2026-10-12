@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
 
+import type { YearMonth } from '@/content/resume.types'
 import { formatYearMonth } from '@/shared/utils/formatYearMonth'
 
 import styles from '../AboutPage.module.css'
-import type { YearMonth } from '../types'
 
 interface TimelineItemProps {
   title: string

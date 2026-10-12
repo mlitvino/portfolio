@@ -1,5 +1,6 @@
 import js from '@eslint/js'
 import eslintReact from '@eslint-react/eslint-plugin'
+import boundaries from 'eslint-plugin-boundaries'
 import globals from 'globals'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -54,4 +55,46 @@ export default defineConfig([
       'no-duplicate-imports': ['error', { allowSeparateTypeImports: true }],
     },
   },
+
+  {
+    files: ['src/**/*.{ts,tsx}'],
+    plugins: { boundaries },
+    settings: {
+      'import/resolver': {
+        typescript: { project: './tsconfig.app.json' },
+      },
+      'boundaries/elements': [
+        { type: 'app', pattern: 'src/app' },
+        { type: 'pages', pattern: 'src/pages/*', capture: ['page'] },
+        { type: 'features', pattern: 'src/features/*', capture: ['feature'] },
+        { type: 'content', pattern: 'src/content' },
+        { type: 'shared', pattern: 'src/shared' },
+      ],
+    },
+    rules: {
+      'boundaries/dependencies': ['error', {
+        default: 'disallow',
+        policies: [
+          allowFromTo('app', ['app', 'pages', 'features', 'shared']),
+          allowFromTo('pages', ['features', 'content', 'shared']),
+          allowFromTo('features', ['shared']),
+          allowFromTo('content', ['content', 'features', 'shared']),
+          allowFromTo('shared', ['shared']),
+        ],
+      }],
+    },
+  },
 ])
+
+function allowFromTo(from, to) {
+  return {
+    from: { element: { type: from } },
+    allow: to.map((type) => ({
+      to: {
+        element: type === 'features'
+          ? { type, fileInternalPath: 'index.ts' }
+          : { type },
+      },
+    })),
+  }
+}

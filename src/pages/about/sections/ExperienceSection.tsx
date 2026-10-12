@@ -1,7 +1,7 @@
+import type { Experience } from '@/content/resume.types'
 import { TagList } from '@/shared/ui/TagList'
 
 import styles from '../AboutPage.module.css'
-import type { Experience } from '../types'
 import { TimelineItem } from './TimelineItem'
 
 interface ExperienceSectionProps {

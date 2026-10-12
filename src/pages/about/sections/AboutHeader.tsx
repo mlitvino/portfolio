@@ -1,8 +1,8 @@
+import type { CvFile } from '@/content/resume.types'
 import buttonStyles from '@/shared/ui/button.module.css'
 import { PageHeader } from '@/shared/ui/PageHeader'
 
 import styles from '../AboutPage.module.css'
-import type { CvFile } from '../types'
 
 interface AboutHeaderProps {
   summary: readonly string[]
