@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+}
+
+/* Short accent line under the title */
+.separator {
+  width: 4rem;
+  margin: 0.75rem auto 2rem;
+  border: none;
+  border-top: 2px solid var(--color-accent);
+}

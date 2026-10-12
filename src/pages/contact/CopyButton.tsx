@@ -44,7 +44,7 @@ export function CopyButton({ value, label }: CopyButtonProps) {
       type="button"
       className={styles.button}
       aria-live="polite"
-      onClick={() => { void copy() }}
+      onClick={() => void copy()}
     >
       {statusText[status]}
       <span className={styles.srOnly}>{` ${label}`}</span>

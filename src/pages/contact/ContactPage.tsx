@@ -1,4 +1,5 @@
 import { siteConfig } from '@/shared/config/site'
+import { PageHeader } from '@/shared/ui/PageHeader'
 
 import { ContactCard } from './ContactCard'
 import styles from './ContactPage.module.css'
@@ -29,13 +30,12 @@ export default function ContactPage() {
     <div className={styles.page}>
       <title>{`Contact — ${siteConfig.name}`}</title>
 
-      <h1 className={styles.heading}>Contact</h1>
-      <hr className={styles.separator} />
-
-      <p className={styles.claim}>Let's build something together.</p>
-      <p className={styles.text}>
-        Have a role, a project or a question in mind? Reach out through any of the links below.
-      </p>
+      <PageHeader title="Contact">
+        <p className={styles.claim}>Let's build something together.</p>
+        <p className={styles.text}>
+          Have a role, a project or a question in mind? Reach out through any of the links below.
+        </p>
+      </PageHeader>
 
       <ul className={styles.cards}>
         {contacts.map((contact) => (

@@ -1,3 +1,5 @@
+import { PageHeader } from '@/shared/ui/PageHeader'
+
 import styles from '../AboutPage.module.css'
 import type { CvFile } from '../types'
 
@@ -8,10 +10,7 @@ interface AboutHeaderProps {
 
 export function AboutHeader({ summary, cv }: AboutHeaderProps) {
   return (
-    <header className={styles.header}>
-      <h1 className={styles.heading}>About me</h1>
-      <hr className={styles.separator} />
-
+    <PageHeader title="About me">
       {summary.map((paragraph) => (
         <p key={paragraph} className={styles.summary}>
           {paragraph}
@@ -27,6 +26,6 @@ export function AboutHeader({ summary, cv }: AboutHeaderProps) {
           Download CV (PDF)
         </a>
       )}
-    </header>
+    </PageHeader>
   )
 }

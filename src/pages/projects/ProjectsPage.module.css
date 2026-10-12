@@ -1,15 +1,3 @@
-.heading {
-  margin: 0;
-  text-align: center;
-}
-
-.separator {
-  width: 4rem;
-  margin: 0.75rem auto 2rem;
-  border: none;
-  border-top: 2px solid var(--color-accent);
-}
-
 .empty {
   text-align: center;
   color: var(--color-muted);

@@ -3,23 +3,6 @@
   margin: 0 auto;
 }
 
-/* Header */
-
-.header {
-  text-align: center;
-}
-
-.heading {
-  margin: 0;
-}
-
-.separator {
-  width: 4rem;
-  margin: 0.75rem auto 2rem;
-  border: none;
-  border-top: 2px solid var(--color-accent);
-}
-
 .summary {
   margin: 0 0 1rem;
   color: var(--color-muted);

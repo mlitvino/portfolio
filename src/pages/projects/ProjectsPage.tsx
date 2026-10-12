@@ -1,5 +1,6 @@
 import { ProjectGrid, projects } from '@/features/projects'
 import { siteConfig } from '@/shared/config/site'
+import { PageHeader } from '@/shared/ui/PageHeader'
 
 import styles from './ProjectsPage.module.css'
 
@@ -8,8 +9,7 @@ export default function ProjectsPage() {
     <>
       <title>{`Projects — ${siteConfig.name}`}</title>
 
-      <h1 className={styles.heading}>Projects</h1>
-      <hr className={styles.separator} />
+      <PageHeader title="Projects" />
 
       {projects.length === 0
         ? <p className={styles.empty}>No projects yet.</p>

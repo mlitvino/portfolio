@@ -14,9 +14,8 @@ export function ContactCard({
   text,
   copyValue,
   href,
-  external
+  external,
 }: ContactCardProps) {
-
   return (
     <div className={styles.card}>
       <h2 className={styles.cardLabel}>{label}</h2>
