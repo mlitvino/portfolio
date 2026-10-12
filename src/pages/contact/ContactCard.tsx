@@ -1,3 +1,5 @@
+import buttonStyles from '@/shared/ui/button.module.css'
+
 import styles from './ContactPage.module.css'
 import { CopyButton } from './CopyButton'
 
@@ -26,7 +28,7 @@ export function ContactCard({
 
         <a
           href={href}
-          className={styles.button}
+          className={buttonStyles.button}
           data-variant="primary"
           target={external ? '_blank' : undefined}
           rel={external ? 'noreferrer noopener' : undefined}

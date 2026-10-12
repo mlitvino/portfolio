@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 
 import { siteConfig } from '@/shared/config/site'
+import buttonStyles from '@/shared/ui/button.module.css'
 
 import styles from '../HomePage.module.css'
 
@@ -12,10 +13,10 @@ export function Hero() {
       <p className={styles.tagline}>{siteConfig.tagline}</p>
 
       <div className={styles.actions}>
-        <Link to="/projects" className={styles.primaryButton}>
+        <Link to="/projects" className={buttonStyles.button} data-variant="primary">
           View projects
         </Link>
-        <Link to="/contact" className={styles.secondaryButton}>
+        <Link to="/contact" className={buttonStyles.button}>
           Contact me
         </Link>
       </div>

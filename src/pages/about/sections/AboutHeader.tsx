@@ -1,3 +1,4 @@
+import buttonStyles from '@/shared/ui/button.module.css'
 import { PageHeader } from '@/shared/ui/PageHeader'
 
 import styles from '../AboutPage.module.css'
@@ -18,13 +19,16 @@ export function AboutHeader({ summary, cv }: AboutHeaderProps) {
       ))}
 
       {cv && (
-        <a
-          href={`${import.meta.env.BASE_URL}${cv.file}`}
-          download={cv.downloadName}
-          className={styles.cvButton}
-        >
-          Download CV (PDF)
-        </a>
+        <div className={styles.cvAction}>
+          <a
+            href={`${import.meta.env.BASE_URL}${cv.file}`}
+            download={cv.downloadName}
+            className={buttonStyles.button}
+            data-variant="primary"
+          >
+            Download CV (PDF)
+          </a>
+        </div>
       )}
     </PageHeader>
   )

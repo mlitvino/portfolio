@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import buttonStyles from '@/shared/ui/button.module.css'
+
 import styles from './ContactPage.module.css'
 
 type Status = 'idle' | 'copied' | 'failed'
@@ -42,7 +44,7 @@ export function CopyButton({ value, label }: CopyButtonProps) {
   return (
     <button
       type="button"
-      className={styles.button}
+      className={buttonStyles.button}
       aria-live="polite"
       onClick={() => void copy()}
     >

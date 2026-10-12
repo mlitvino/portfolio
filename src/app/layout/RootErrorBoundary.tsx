@@ -1,6 +1,7 @@
 import { isRouteErrorResponse, useRouteError } from 'react-router'
 
 import { siteConfig } from '@/shared/config/site'
+import buttonStyles from '@/shared/ui/button.module.css'
 
 export function RootErrorBoundary() {
   const error = useRouteError()
@@ -21,6 +22,8 @@ export function RootErrorBoundary() {
       </p>
       <button
         type="button"
+        className={buttonStyles.button}
+        data-variant="primary"
         onClick={() => {
           window.location.reload()
         }}
