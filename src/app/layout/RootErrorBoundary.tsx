@@ -1,7 +1,10 @@
-import { isRouteErrorResponse, useRouteError } from 'react-router'
+import { isRouteErrorResponse, Link, useRouteError } from 'react-router'
 
 import buttonStyles from '@/shared/ui/button.module.css'
+import { PageHeader } from '@/shared/ui/PageHeader'
 import { pageTitle } from '@/shared/utils/pageTitle'
+
+import styles from './RootErrorBoundary.module.css'
 
 export function RootErrorBoundary() {
   const error = useRouteError()
@@ -16,21 +19,30 @@ export function RootErrorBoundary() {
   return (
     <main id="content">
       <title>{pageTitle('Something went wrong')}</title>
-      <h1>Something went wrong</h1>
-      <p>
-        Try reloading the page. If you opened an old tab, a new version may have been published.
-      </p>
-      <button
-        type="button"
-        className={buttonStyles.button}
-        data-variant="primary"
-        onClick={() => {
-          window.location.reload()
-        }}
-      >
-        Reload
-      </button>
-      {import.meta.env.DEV && details !== '' && <pre>{details}</pre>}
+
+      <PageHeader title="Something went wrong">
+        <p>
+          Try reloading the page. If you opened an old tab, a new version may have been published.
+        </p>
+
+        <div className={styles.actions}>
+          <button
+            type="button"
+            className={buttonStyles.button}
+            data-variant="primary"
+            onClick={() => {
+              window.location.reload()
+            }}
+          >
+            Reload
+          </button>
+          <Link to="/" className={buttonStyles.button}>
+            Go home
+          </Link>
+        </div>
+
+        {import.meta.env.DEV && details !== '' && <pre className={styles.details}>{details}</pre>}
+      </PageHeader>
     </main>
   )
 }
