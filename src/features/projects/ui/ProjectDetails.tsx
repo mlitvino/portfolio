@@ -6,6 +6,7 @@ import { formatYearMonth } from '@/shared/utils/formatYearMonth'
 
 import type { Project } from '../model/types'
 import styles from './ProjectDetails.module.css'
+import { ScreenshotGallery } from './ScreenshotGallery'
 
 interface ProjectDetailsProps {
   project: Project
@@ -56,14 +57,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
 
       {visuals && visuals.length > 0 && (
         <section className={styles.section} aria-label="Screenshots">
-          {visuals.map((visual) => (
-            <figure key={visual.src} className={styles.figure}>
-              <img src={visual.src} alt={visual.alt} loading="lazy" className={styles.image} />
-              {visual.caption && (
-                <figcaption className={styles.caption}>{visual.caption}</figcaption>
-              )}
-            </figure>
-          ))}
+          <ScreenshotGallery key={project.slug} visuals={visuals} />
         </section>
       )}
 
