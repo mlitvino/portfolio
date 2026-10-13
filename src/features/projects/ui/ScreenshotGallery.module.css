@@ -6,7 +6,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   background: var(--color-surface);
 }
 
@@ -40,7 +40,7 @@
   padding: 0;
   overflow: hidden;
   border: 2px solid var(--color-border);
-  border-radius: 6px;
+  border-radius: var(--radius-control);
   background: var(--color-surface);
   opacity: 0.6;
   cursor: pointer;

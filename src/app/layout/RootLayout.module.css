@@ -7,7 +7,7 @@
   background: var(--color-bg);
   color: var(--color-text);
   border: 2px solid currentColor;
-  border-radius: 4px;
+  border-radius: var(--radius-small);
   transform: translateY(-200%);
 }
 

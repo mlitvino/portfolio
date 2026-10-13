@@ -19,11 +19,12 @@ export function ScreenshotGallery({ visuals }: ScreenshotGalleryProps) {
         <div className={styles.frame}>
           <img src={current.src} alt={current.alt} className={styles.image} />
         </div>
-        {current.caption &&
-          <figcaption className={styles.caption}>
-            {current.caption}
-          </figcaption>
-        }
+        {current.caption
+          && (
+            <figcaption className={styles.caption}>
+              {current.caption}
+            </figcaption>
+          )}
       </figure>
 
       {visuals.length > 1 && (
