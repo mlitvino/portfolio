@@ -13,7 +13,10 @@ export function ThemeToggle() {
       className={styles.toggle}
       aria-label={label}
       title={label}
-      onClick={toggleTheme}
+      onClick={(event) => {
+        const box = event.currentTarget.getBoundingClientRect()
+        toggleTheme({ x: box.left + box.width / 2, y: box.top + box.height / 2 })
+      }}
     >
       {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>

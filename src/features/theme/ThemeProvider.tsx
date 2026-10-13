@@ -1,6 +1,8 @@
 import { type ReactNode, useEffect, useState } from 'react'
+import { flushSync } from 'react-dom'
 
-import { type Theme, ThemeContext } from './ThemeContext'
+import { type Point, type Theme, ThemeContext } from './ThemeContext'
+import { switchThemeAnimated } from './themeTransition'
 
 const STORAGE_KEY = 'theme'
 
@@ -48,11 +50,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const value = {
     theme,
-    toggleTheme: () => {
+    toggleTheme: (origin?: Point) => {
       const next = theme === 'dark' ? 'light' : 'dark'
-      applyTheme(next)
-      saveTheme(next)
-      setTheme(next)
+      const update = () => {
+        applyTheme(next)
+        saveTheme(next)
+        // eslint-disable-next-line @eslint-react/dom-no-flush-sync
+        flushSync(() => {
+          setTheme(next)
+        })
+      }
+
+      if (origin) {
+        switchThemeAnimated(next, origin, update)
+      } else {
+        update()
+      }
     },
   }
 
