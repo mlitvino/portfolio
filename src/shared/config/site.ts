@@ -1,4 +1,7 @@
+export type Availability = 'open' | 'selective' | 'closed'
+
 export const siteConfig = {
+  availability: 'open' as Availability,
   name: 'Mykhailo Litvinov',
   title: 'Software Developer',
   tagline:

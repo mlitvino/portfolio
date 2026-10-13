@@ -7,6 +7,9 @@
   --color-muted: #6b6b6b;
   --color-border: #e5e5e5;
   --color-accent: #2563eb;
+  --color-status-open: #16a34a;
+  --color-status-selective: #ea580c;
+  --color-status-closed: #9ca3af;
 }
 
 [data-theme="dark"] {
@@ -17,4 +20,7 @@
   --color-muted: #a3a3a3;
   --color-border: #2a2a2a;
   --color-accent: #facc15;
+  --color-status-open: #22c55e;
+  --color-status-selective: #fb923c;
+  --color-status-closed: #6b7280;
 }
