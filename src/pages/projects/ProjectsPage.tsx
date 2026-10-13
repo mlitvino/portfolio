@@ -43,8 +43,9 @@ export default function ProjectsPage() {
         : (
           <>
             <ProjectFilter
-              groups={getFilterGroups(selected)}
+              groups={getFilterGroups(selected, visible)}
               total={projects.length}
+              hasSelection={selected.length > 0}
               onToggle={toggleTag}
               onClear={() => {
                 setTags([])

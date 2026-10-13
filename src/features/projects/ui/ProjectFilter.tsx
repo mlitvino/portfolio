@@ -4,16 +4,17 @@ import styles from './ProjectFilter.module.css'
 interface ProjectFilterProps {
   groups: readonly FilterGroup[]
   total: number
+  hasSelection: boolean
   onToggle: (tag: string) => void
   onClear: () => void
 }
 
-export function ProjectFilter({ groups, total, onToggle, onClear }: ProjectFilterProps) {
-  const noneSelected = groups.every((group) => group.options.every((option) => !option.selected))
-
+export function ProjectFilter(
+  { groups, total, hasSelection, onToggle, onClear }: ProjectFilterProps,
+) {
   return (
     <div className={styles.filter}>
-      <button type="button" className={styles.chip} aria-pressed={noneSelected} onClick={onClear}>
+      <button type="button" className={styles.chip} aria-pressed={!hasSelection} onClick={onClear}>
         All <span className={styles.count}>{total}</span>
       </button>
 

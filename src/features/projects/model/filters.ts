@@ -43,9 +43,10 @@ export function filterProjects(list: readonly Project[], selected: readonly stri
   return list.filter((project) => selected.every((tag) => hasTag(project, tag)))
 }
 
-export function getFilterGroups(selected: readonly string[]): FilterGroup[] {
-  const matching = filterProjects(projects, selected)
-
+export function getFilterGroups(
+  selected: readonly string[],
+  matching: readonly Project[],
+): FilterGroup[] {
   return FILTER_GROUPS.map((group) => ({
     label: group.label,
     options: group.tags
