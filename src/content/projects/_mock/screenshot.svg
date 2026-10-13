@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#3f3f46"/>
+  <rect width="1200" height="48" fill="#27272a"/>
+  <circle cx="32" cy="24" r="8" fill="#71717a"/>
+  <circle cx="60" cy="24" r="8" fill="#71717a"/>
+  <circle cx="88" cy="24" r="8" fill="#71717a"/>
+  <text x="600" y="375" font-size="56" font-family="sans-serif" fill="#e4e4e7" text-anchor="middle">Mock screenshot</text>
+</svg>

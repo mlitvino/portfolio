@@ -3,5 +3,6 @@ export { filterProjects, getFilterGroups, parseSelectedTags } from './model/filt
 export { featuredProjects, getProjectBySlug, projects } from './model/projects'
 export type { Project, ProjectData } from './model/types'
 export { ProjectCard } from './ui/ProjectCard'
+export { ProjectDetails } from './ui/ProjectDetails'
 export { ProjectFilter } from './ui/ProjectFilter'
 export { ProjectGrid } from './ui/ProjectGrid'

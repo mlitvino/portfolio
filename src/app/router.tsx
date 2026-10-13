@@ -5,6 +5,7 @@ import ContactPage from '@/pages/contact/ContactPage'
 import ErrorPreviewPage from '@/pages/error-preview/ErrorPreviewPage'
 import HomePage from '@/pages/home/HomePage'
 import NotFoundPage from '@/pages/not-found/NotFoundPage'
+import ProjectPage from '@/pages/project/ProjectPage'
 import ProjectsPage from '@/pages/projects/ProjectsPage'
 
 import { RootErrorBoundary } from './layout/RootErrorBoundary'
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(
         { index: true, Component: HomePage },
         { path: 'about', Component: AboutPage },
         { path: 'projects', Component: ProjectsPage },
+        { path: 'projects/:slug', Component: ProjectPage },
         { path: 'contact', Component: ContactPage },
         { path: 'error', Component: ErrorPreviewPage },
         { path: '*', Component: NotFoundPage },

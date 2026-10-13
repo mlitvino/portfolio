@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#3f3f46"/>
+  <path d="M0 0L1200 675M1200 0L0 675" stroke="#52525b" stroke-width="4"/>
+  <rect x="380" y="292" width="440" height="92" rx="12" fill="#27272a"/>
+  <text x="600" y="355" font-size="52" font-family="sans-serif" fill="#e4e4e7" text-anchor="middle">Mock cover</text>
+</svg>

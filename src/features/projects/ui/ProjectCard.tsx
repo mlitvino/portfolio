@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 import { ExternalLink } from '@/shared/ui/ExternalLink'
 import { TagList } from '@/shared/ui/TagList'
 
@@ -9,13 +11,17 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { title, summary, tech, topics, cover, links } = project
+  const { slug, title, summary, tech, topics, cover, links } = project
 
   return (
     <article className={styles.card}>
       {cover && <img src={cover} alt="" className={styles.cover} />}
 
-      <h3 className={styles.title}>{title}</h3>
+      <h3 className={styles.title}>
+        <Link to={`/projects/${slug}`} className={styles.cardLink}>
+          {title}
+        </Link>
+      </h3>
       <p className={styles.summary}>{summary}</p>
 
       <TagList items={tech} label="Technologies" />

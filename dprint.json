@@ -5,7 +5,7 @@
   "newLineKind": "lf",
   "typescript": {
     "semiColons": "asi",
-    "quoteStyle": "alwaysSingle",
+    "quoteStyle": "preferSingle",
     "jsx.quoteStyle": "preferDouble",
     "trailingCommas": "onlyMultiLine",
     "module.sortImportDeclarations": "maintain",
