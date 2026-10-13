@@ -20,10 +20,9 @@ export const projects: readonly Project[] = Object.entries(modules)
   .filter((project) => !project.draft)
   .sort((a, b) => b.date.localeCompare(a.date))
 
-export const featuredProjects = projects.filter((project) => project.featured).slice(
-  0,
-  MAX_FEATURED_PROJECTS,
-)
+export const featuredProjects = projects
+  .filter((project) => project.featured)
+  .slice(0, MAX_FEATURED_PROJECTS)
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug)
