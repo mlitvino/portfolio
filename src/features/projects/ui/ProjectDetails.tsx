@@ -1,6 +1,7 @@
 import buttonStyles from '@/shared/ui/button.module.css'
 import { ExternalLink } from '@/shared/ui/ExternalLink'
 import { PageHeader } from '@/shared/ui/PageHeader'
+import { Section } from '@/shared/ui/Section'
 import { TagList } from '@/shared/ui/TagList'
 import { formatYearMonth } from '@/shared/utils/formatYearMonth'
 
@@ -56,14 +57,13 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       </PageHeader>
 
       {visuals && visuals.length > 0 && (
-        <section className={styles.section} aria-label="Screenshots">
+        <section className={styles.gallery} aria-label="Screenshots">
           <ScreenshotGallery key={project.slug} visuals={visuals} />
         </section>
       )}
 
       {glance.length > 0 && (
-        <section className={styles.section} aria-labelledby="glance-heading">
-          <h2 id="glance-heading" className={styles.heading}>At a glance</h2>
+        <Section title="At a glance">
           <dl className={styles.glance}>
             {glance.map((item) => (
               <div key={item.label}>
@@ -72,23 +72,21 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
               </div>
             ))}
           </dl>
-        </section>
+        </Section>
       )}
 
       {overview && overview.length > 0 && (
-        <section className={styles.section} aria-labelledby="overview-heading">
-          <h2 id="overview-heading" className={styles.heading}>Overview</h2>
+        <Section title="Overview">
           {overview.map((paragraph) => (
             <p key={paragraph} className={styles.paragraph}>
               {paragraph}
             </p>
           ))}
-        </section>
+        </Section>
       )}
 
       {features && features.length > 0 && (
-        <section className={styles.section} aria-labelledby="features-heading">
-          <h2 id="features-heading" className={styles.heading}>Key features</h2>
+        <Section title="Key features">
           <ul className={styles.bullets}>
             {features.map((feature) => (
               <li key={feature}>
@@ -96,12 +94,11 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
               </li>
             ))}
           </ul>
-        </section>
+        </Section>
       )}
 
       {learned && learned.length > 0 && (
-        <section className={styles.section} aria-labelledby="learned-heading">
-          <h2 id="learned-heading" className={styles.heading}>What I learned</h2>
+        <Section title="What I learned">
           <ul className={styles.bullets}>
             {learned.map((lesson) => (
               <li key={lesson}>
@@ -109,7 +106,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
               </li>
             ))}
           </ul>
-        </section>
+        </Section>
       )}
     </article>
   )

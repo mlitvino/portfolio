@@ -1,4 +1,5 @@
 import type { SkillGroup } from '@/content/resume.types'
+import { Section } from '@/shared/ui/Section'
 import { TagList } from '@/shared/ui/TagList'
 
 import styles from '../AboutPage.module.css'
@@ -11,11 +12,7 @@ export function SkillsSection({ groups }: SkillsSectionProps) {
   if (groups.length === 0) return null
 
   return (
-    <section className={styles.section} aria-labelledby="skills-heading">
-      <h2 id="skills-heading" className={styles.sectionHeading}>
-        Skills
-      </h2>
-
+    <Section title="Skills">
       <dl className={styles.skills}>
         {groups.map((group) => (
           <div key={group.label} className={styles.skillRow}>
@@ -27,6 +24,6 @@ export function SkillsSection({ groups }: SkillsSectionProps) {
           </div>
         ))}
       </dl>
-    </section>
+    </Section>
   )
 }

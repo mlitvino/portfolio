@@ -1,4 +1,5 @@
 import type { Experience } from '@/content/resume.types'
+import { Section } from '@/shared/ui/Section'
 import { TagList } from '@/shared/ui/TagList'
 
 import styles from '../AboutPage.module.css'
@@ -12,11 +13,7 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
   if (items.length === 0) return null
 
   return (
-    <section className={styles.section} aria-labelledby="experience-heading">
-      <h2 id="experience-heading" className={styles.sectionHeading}>
-        Experience
-      </h2>
-
+    <Section title="Experience">
       <ol className={styles.timeline}>
         {items.map((item) => (
           <li key={`${item.company}-${item.start}`}>
@@ -39,6 +36,6 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
           </li>
         ))}
       </ol>
-    </section>
+    </Section>
   )
 }

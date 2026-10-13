@@ -1,4 +1,5 @@
 import type { LanguageLevel, SpokenLanguage } from '@/content/resume.types'
+import { Section } from '@/shared/ui/Section'
 
 import styles from '../AboutPage.module.css'
 
@@ -18,11 +19,7 @@ export function LanguagesSection({ languages }: LanguagesSectionProps) {
   if (languages.length === 0) return null
 
   return (
-    <section className={styles.section} aria-labelledby="languages-heading">
-      <h2 id="languages-heading" className={styles.sectionHeading}>
-        Languages
-      </h2>
-
+    <Section title="Languages">
       <dl className={styles.languages}>
         {languages.map((language) => (
           <div key={language.name}>
@@ -31,6 +28,6 @@ export function LanguagesSection({ languages }: LanguagesSectionProps) {
           </div>
         ))}
       </dl>
-    </section>
+    </Section>
   )
 }

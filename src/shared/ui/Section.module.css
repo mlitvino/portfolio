@@ -1,0 +1,12 @@
+:where(.section) {
+  padding-top: 2.5rem;
+}
+
+:where(.heading) {
+  margin: 0 0 1.25rem;
+  font-size: 1.375rem;
+}
+
+.heading[data-align="center"] {
+  text-align: center;
+}

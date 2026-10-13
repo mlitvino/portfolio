@@ -1,4 +1,5 @@
 import type { Education } from '@/content/resume.types'
+import { Section } from '@/shared/ui/Section'
 
 import styles from '../AboutPage.module.css'
 import { TimelineItem } from './TimelineItem'
@@ -11,11 +12,7 @@ export function EducationSection({ items }: EducationSectionProps) {
   if (items.length === 0) return null
 
   return (
-    <section className={styles.section} aria-labelledby="education-heading">
-      <h2 id="education-heading" className={styles.sectionHeading}>
-        Education
-      </h2>
-
+    <Section title="Education">
       <ol className={styles.timeline}>
         {items.map((item) => (
           <li key={`${item.institution}-${item.start}`}>
@@ -30,6 +27,6 @@ export function EducationSection({ items }: EducationSectionProps) {
           </li>
         ))}
       </ol>
-    </section>
+    </Section>
   )
 }
