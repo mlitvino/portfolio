@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { title, summary, tech, cover, links } = project
+  const { title, summary, tech, topics, cover, links } = project
 
   return (
     <article className={styles.card}>
@@ -19,6 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <p className={styles.summary}>{summary}</p>
 
       <TagList items={tech} label="Technologies" />
+      {topics && <TagList items={topics} label="Topics" />}
 
       <div className={styles.links}>
         {links.live && <ExternalLink href={links.live}>Live demo</ExternalLink>}

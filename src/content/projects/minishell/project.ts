@@ -6,6 +6,7 @@ export default {
     'A minimal Unix shell written in C: process creation and synchronisation, signal handling and built-in commands, with no memory leaks.',
   date: '2025-03-25',
   tech: ['C', 'Unix', 'Make'],
+  topics: ['Processes', 'Signals'],
   links: {
     repo: 'https://github.com/mlitvino/minishell',
   },

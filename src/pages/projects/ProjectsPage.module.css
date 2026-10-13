@@ -2,3 +2,13 @@
   text-align: center;
   color: var(--color-muted);
 }
+
+.reset {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}

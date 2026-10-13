@@ -3,6 +3,7 @@ export interface ProjectData {
   summary: string
   date: string
   tech: readonly string[]
+  topics?: readonly string[]
   cover?: string
   links: {
     live?: string
