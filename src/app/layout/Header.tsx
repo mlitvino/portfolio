@@ -7,7 +7,7 @@ import styles from './Header.module.css'
 
 const navItems = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About me' },
+  { to: '/about', label: 'About' },
   { to: '/projects', label: 'Projects' },
   { to: '/contact', label: 'Contact' },
 ]

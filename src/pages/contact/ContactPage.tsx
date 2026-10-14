@@ -9,12 +9,14 @@ function displayUrl(url: string): string {
   return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')
 }
 
+const email = `${siteConfig.email.user}@${siteConfig.email.domain}`
+
 const contacts = [
   {
     label: 'Email',
-    text: siteConfig.email,
-    copyValue: siteConfig.email,
-    href: `mailto:${siteConfig.email}`,
+    text: email,
+    copyValue: email,
+    href: `mailto:${email}`,
     external: false,
   },
   ...siteConfig.socials.map(({ label, url }) => ({

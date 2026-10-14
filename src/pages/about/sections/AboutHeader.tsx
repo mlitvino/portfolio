@@ -11,7 +11,7 @@ interface AboutHeaderProps {
 
 export function AboutHeader({ summary, cv }: AboutHeaderProps) {
   return (
-    <PageHeader title="About me">
+    <PageHeader title="About">
       {summary.map((paragraph) => (
         <p key={paragraph} className={styles.summary}>
           {paragraph}

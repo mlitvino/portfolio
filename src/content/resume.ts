@@ -1,6 +1,10 @@
 import type { Resume } from './resume.types'
 
 export const resume: Resume = {
+  cv: {
+    file: 'Mykhailo_Litvinov_CV.pdf',
+    downloadName: 'Mykhailo_Litvinov_CV.pdf',
+  },
   summary: [
     'Mock summary: who you are and what you do, in one or two sentences.',
     'Mock background: how you got into programming and what you focus on now.',

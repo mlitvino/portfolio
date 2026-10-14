@@ -12,7 +12,7 @@ import { SkillsSection } from './sections/SkillsSection'
 export default function AboutPage() {
   return (
     <div className={styles.page}>
-      <title>{pageTitle('About me')}</title>
+      <title>{pageTitle('About')}</title>
 
       <AboutHeader summary={resume.summary} cv={resume.cv} />
       <ExperienceSection items={resume.experience} />
