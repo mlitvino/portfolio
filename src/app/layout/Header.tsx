@@ -15,7 +15,7 @@ const navItems = [
 export function Header() {
   return (
     <header className={styles.header}>
-      <Link to="/" className={styles.logo}>
+      <Link to="/" className={styles.logo} viewTransition>
         {siteConfig.name}
       </Link>
       <div className={styles.actions}>
@@ -25,6 +25,7 @@ export function Header() {
               key={to}
               to={to}
               end={to === '/'}
+              viewTransition
               className={({ isActive }) => (isActive ? styles.active : undefined)}
             >
               {label}

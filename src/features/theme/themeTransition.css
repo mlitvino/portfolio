@@ -1,5 +1,5 @@
-::view-transition-old(root),
-::view-transition-new(root) {
+:root[data-theme-transition]::view-transition-old(root),
+:root[data-theme-transition]::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
 }
@@ -8,8 +8,8 @@
   z-index: 1;
 }
 
-::view-transition-old(theme-toggle),
-::view-transition-new(theme-toggle) {
+:root[data-theme-transition]::view-transition-old(theme-toggle),
+:root[data-theme-transition]::view-transition-new(theme-toggle) {
   animation: none;
 }
 

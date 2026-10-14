@@ -13,7 +13,7 @@ export function FeaturedProjects() {
       <ProjectGrid projects={featuredProjects} />
 
       <p className={styles.more}>
-        <Link to="/projects">See all projects →</Link>
+        <Link to="/projects" viewTransition>See all projects →</Link>
       </p>
     </Section>
   )

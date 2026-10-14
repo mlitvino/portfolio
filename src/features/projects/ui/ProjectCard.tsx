@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link, useViewTransitionState } from 'react-router'
 
 import { ExternalLink } from '@/shared/ui/ExternalLink'
 import { TagList } from '@/shared/ui/TagList'
@@ -12,13 +12,18 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const { slug, title, summary, tech, topics, cover, links } = project
+  const href = `/projects/${slug}`
+  const isTransitioning = useViewTransitionState(href)
 
   return (
     <article className={styles.card}>
       {cover && <img src={cover} alt="" className={styles.cover} />}
 
-      <h3 className={styles.title}>
-        <Link to={`/projects/${slug}`} className={styles.cardLink}>
+      <h3
+        className={styles.title}
+        style={isTransitioning ? { viewTransitionName: 'project-title' } : undefined}
+      >
+        <Link to={href} className={styles.cardLink} viewTransition>
           {title}
         </Link>
       </h3>

@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.page h1 {
+  view-transition-name: project-title;
+}
+
 /* Header intro */
 
 .date {

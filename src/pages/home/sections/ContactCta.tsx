@@ -11,7 +11,12 @@ export function ContactCta() {
       <p className={styles.ctaText}>
         Have a role or a project in mind? I'd be happy to talk.
       </p>
-      <Link to="/contact" className={buttonStyles.button} data-variant="primary">
+      <Link
+        to="/contact"
+        className={buttonStyles.button}
+        data-variant="primary"
+        viewTransition
+      >
         Get in touch
       </Link>
     </Section>
