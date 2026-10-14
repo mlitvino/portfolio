@@ -7,3 +7,13 @@
 :root[data-theme-transition="to-dark"]::view-transition-old(root) {
   z-index: 1;
 }
+
+::view-transition-old(theme-toggle),
+::view-transition-new(theme-toggle) {
+  animation: none;
+}
+
+:root[data-theme-transition="to-dark"]::view-transition-new(theme-toggle),
+:root[data-theme-transition="to-light"]::view-transition-old(theme-toggle) {
+  opacity: 0;
+}

@@ -10,6 +10,7 @@
   background: var(--color-bg);
   color: var(--color-accent);
   cursor: pointer;
+  view-transition-name: theme-toggle;
 }
 
 .toggle:hover {

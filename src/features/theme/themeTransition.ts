@@ -19,7 +19,11 @@ export function switchThemeAnimated(next: Theme, origin: Point, update: () => vo
 
   const transition = document.startViewTransition(update)
   transition.ready.then(() => {
-    const circle = animateCircle(next, origin)
+    const circle = animateCircle(
+      next,
+      toggleCenterInTransition() ?? origin,
+      transitionSize(),
+    )
     const stop = () => {
       circle.cancel()
     }
@@ -28,8 +32,30 @@ export function switchThemeAnimated(next: Theme, origin: Point, update: () => vo
   transition.finished.then(cleanUp, cleanUp)
 }
 
-function animateCircle(next: Theme, { x, y }: Point): Animation {
-  const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))
+function toggleCenterInTransition(): Point | null {
+  const group = getComputedStyle(document.documentElement, '::view-transition-group(theme-toggle)')
+  const width = parseFloat(group.width)
+  const height = parseFloat(group.height)
+  if (!group.transform || group.transform === 'none' || !width || !height) return null
+
+  const { e: left, f: top } = new DOMMatrixReadOnly(group.transform)
+  return { x: left + width / 2, y: top + height / 2 }
+}
+
+function transitionSize(): { width: number; height: number } {
+  const root = getComputedStyle(document.documentElement, '::view-transition-group(root)')
+  return {
+    width: Math.max(parseFloat(root.width) || 0, innerWidth),
+    height: Math.max(parseFloat(root.height) || 0, innerHeight),
+  }
+}
+
+function animateCircle(
+  next: Theme,
+  { x, y }: Point,
+  { width, height }: { width: number; height: number },
+): Animation {
+  const radius = Math.hypot(Math.max(x, width - x), Math.max(y, height - y))
   const center = `at ${String(x)}px ${String(y)}px`
   const fullScreen = `circle(${String(radius)}px ${center})`
   const point = `circle(0px ${center})`
