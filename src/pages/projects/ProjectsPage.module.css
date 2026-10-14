@@ -1,3 +1,8 @@
+.page {
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
 .empty {
   text-align: center;
   color: var(--color-muted);

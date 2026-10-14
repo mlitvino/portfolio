@@ -33,7 +33,7 @@ export default function ProjectsPage() {
   }
 
   return (
-    <>
+    <div className={styles.page}>
       <title>{pageTitle('Projects')}</title>
 
       <PageHeader title="Projects" />
@@ -71,9 +71,14 @@ export default function ProjectsPage() {
                   </button>
                 </p>
               )
-              : <ProjectGrid projects={visible} />}
+              : (
+                <>
+                  <h2 className="sr-only">Project list</h2>
+                  <ProjectGrid projects={visible} />
+                </>
+              )}
           </>
         )}
-    </>
+    </div>
   )
 }
