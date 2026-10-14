@@ -12,3 +12,5 @@ export const siteConfig = {
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/<you>' },
   ],
 } as const
+
+export type SocialLabel = (typeof siteConfig.socials)[number]['label']
