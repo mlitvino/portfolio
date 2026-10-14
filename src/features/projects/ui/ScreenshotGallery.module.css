@@ -46,7 +46,8 @@
   cursor: pointer;
 }
 
-.thumbnail:hover {
+.thumbnail:hover,
+.thumbnail:focus-visible {
   opacity: 1;
 }
 

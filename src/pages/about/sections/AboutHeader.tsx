@@ -25,6 +25,7 @@ export function AboutHeader({ summary, cv }: AboutHeaderProps) {
             download={cv.downloadName}
             className={buttonStyles.button}
             data-variant="primary"
+            data-umami-event="Download CV"
           >
             Download CV (PDF)
           </a>
