@@ -1,7 +1,6 @@
 import type { LanguageLevel, SpokenLanguage } from '@/content/resume.types'
+import { InfoList } from '@/shared/ui/InfoList'
 import { Section } from '@/shared/ui/Section'
-
-import styles from '../AboutPage.module.css'
 
 const levelLabels: Record<LanguageLevel, string> = {
   elementary: 'Elementary',
@@ -20,14 +19,12 @@ export function LanguagesSection({ languages }: LanguagesSectionProps) {
 
   return (
     <Section title="Languages">
-      <dl className={styles.languages}>
-        {languages.map((language) => (
-          <div key={language.name}>
-            <dt className={styles.languageName}>{language.name}</dt>
-            <dd className={styles.languageLevel}>{levelLabels[language.level]}</dd>
-          </div>
-        ))}
-      </dl>
+      <InfoList
+        items={languages.map((language) => ({
+          label: language.name,
+          value: levelLabels[language.level],
+        }))}
+      />
     </Section>
   )
 }

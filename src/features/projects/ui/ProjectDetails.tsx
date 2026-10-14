@@ -1,5 +1,6 @@
 import buttonStyles from '@/shared/ui/button.module.css'
 import { ExternalLink } from '@/shared/ui/ExternalLink'
+import { InfoList } from '@/shared/ui/InfoList'
 import { PageHeader } from '@/shared/ui/PageHeader'
 import { Section } from '@/shared/ui/Section'
 import { TagList } from '@/shared/ui/TagList'
@@ -64,14 +65,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
 
       {glance.length > 0 && (
         <Section title="At a glance">
-          <dl className={styles.glance}>
-            {glance.map((item) => (
-              <div key={item.label}>
-                <dt className={styles.glanceLabel}>{item.label}</dt>
-                <dd className={styles.glanceValue}>{item.value}</dd>
-              </div>
-            ))}
-          </dl>
+          <InfoList items={glance} />
         </Section>
       )}
 
