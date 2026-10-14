@@ -3,6 +3,8 @@
   --radius-control: 6px;
   --radius-card: 8px;
   --radius-pill: 999px;
+
+  --content-width: 64rem;
 }
 
 :root,
