@@ -2,16 +2,16 @@ import { Section } from '@/shared/ui/Section'
 
 import styles from '../AboutPage.module.css'
 
-interface StorySectionProps {
+interface BackgroundSectionProps {
   paragraphs: readonly string[]
 }
 
-export function StorySection({ paragraphs }: StorySectionProps) {
+export function BackgroundSection({ paragraphs }: BackgroundSectionProps) {
   if (paragraphs.length === 0) return null
 
   return (
-    <Section title="My story">
-      <div className={styles.story}>
+    <Section title="Background">
+      <div className={styles.background}>
         {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </div>
     </Section>

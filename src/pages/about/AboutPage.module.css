@@ -40,17 +40,15 @@
   }
 }
 
-/* My story */
+/* Background */
 
-.story p {
+.background p {
   margin: 0 0 1rem;
 }
 
-.story p:last-child {
+.background p:last-child {
   margin-bottom: 0;
 }
-
-/* Sections */
 
 /* Timeline (experience, education) */
 
