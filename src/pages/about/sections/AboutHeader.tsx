@@ -6,7 +6,7 @@ import { PageHeader } from '@/shared/ui/PageHeader'
 import styles from '../AboutPage.module.css'
 
 interface AboutHeaderProps {
-  intro: string
+  intro: readonly string[]
   photo?: string | undefined
   cv?: CvFile | undefined
 }
@@ -19,7 +19,11 @@ export function AboutHeader({ intro, photo, cv }: AboutHeaderProps) {
 
         <div>
           <p className={styles.introName}>{siteConfig.name}</p>
-          <p className={styles.introText}>{intro}</p>
+          {intro.map((paragraph) => (
+            <p key={paragraph} className={styles.introText}>
+              {paragraph}
+            </p>
+          ))}
 
           {cv && (
             <a

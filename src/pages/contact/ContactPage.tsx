@@ -34,9 +34,10 @@ export default function ContactPage() {
       <title>{pageTitle('Contact')}</title>
 
       <PageHeader title="Contact">
-        <p className={styles.claim}>Let's build something together.</p>
+        <p className={styles.claim}>Let's talk!</p>
         <p className={styles.text}>
-          Have a role, a project or a question in mind? Reach out through any of the links below.
+          I'm open to new opportunities, ideas and conversations. Don't hesitate to reach out, even
+          if it's just to say hello.
         </p>
       </PageHeader>
 

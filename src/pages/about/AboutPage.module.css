@@ -29,7 +29,7 @@
 }
 
 .introText {
-  margin: 0.25rem 0 1rem;
+  margin: 0.25rem 0 0.75rem;
   color: var(--color-muted);
 }
 
@@ -40,13 +40,13 @@
   }
 }
 
-/* Background */
+/* What I do, Background */
 
-.background p {
+.prose p {
   margin: 0 0 1rem;
 }
 
-.background p:last-child {
+.prose p:last-child {
   margin-bottom: 0;
 }
 

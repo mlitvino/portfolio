@@ -5,11 +5,11 @@ export const siteConfig = {
   name: 'Mykhailo Litvinov',
   title: 'Software Developer',
   tagline:
-    'I build software from low-level C programs to modern web apps with React and TypeScript.',
-  email: { user: 'you', domain: 'example.com' },
+    'Full-stack developer with a low-level C background: I build web apps that are fast and reliable from the server to the browser.',
+  email: { user: 'mi.litvino', domain: 'gmail.com' },
   socials: [
     { label: 'GitHub', url: 'https://github.com/mlitvino' },
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/<you>' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/mlitvino/' },
   ],
 } as const
 

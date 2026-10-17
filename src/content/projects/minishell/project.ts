@@ -1,7 +1,6 @@
 import type { ProjectData } from '@/features/projects'
 
-import mockCover from '../_mock/cover.svg'
-import mockScreenshot from '../_mock/screenshot.svg'
+import screenshot from './minishell.png'
 
 export default {
   title: 'Minishell',
@@ -13,22 +12,17 @@ export default {
   links: {
     repo: 'https://github.com/mlitvino/minishell',
   },
-  featured: true,
-  cover: mockCover,
+  featured: false,
 
-  role: 'Mock: Solo or team (what you did)',
-  duration: 'Mock: 6 weeks',
+  team: '2 people',
+  role: 'Command execution: processes, built-ins and signals',
+  duration: '6 weeks',
   context: 'School project',
   visuals: [
     {
-      src: mockScreenshot,
-      alt: 'Mock: describe what the screenshot shows',
-      caption: 'Mock caption: running built-in commands',
-    },
-    {
-      src: mockScreenshot,
-      alt: 'Mock: a second screenshot',
-      caption: 'Mock caption: a pipeline of commands',
+      src: screenshot,
+      alt: 'Running built-in commands',
+      caption: 'Running built-in commands',
     },
   ],
   overview: [
@@ -43,8 +37,10 @@ export default {
     'Builds with a Makefile',
   ],
   learned: [
-    'Mock: what you learned about creating processes with fork and execve',
-    'Mock: what you learned about handling signals',
-    'Mock: what you learned about finding and fixing memory leaks',
+    'How programs run: creating, replacing and waiting for processes with fork, execve and wait',
+    'How processes communicate through file descriptors, exit statuses and signals',
+    'Managing memory by hand in C, with zero leaks',
+    'Teamwork: splitting the shell into parser and executor and syncing through Git',
+    'Planning six weeks of work into milestones and delivering on time',
   ],
 } satisfies ProjectData

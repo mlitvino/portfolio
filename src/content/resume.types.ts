@@ -44,7 +44,8 @@ export interface CvFile {
 export interface Resume {
   cv?: CvFile
   photo?: string
-  intro: string
+  intro: readonly string[]
+  whatIDo: readonly string[]
   background: readonly string[]
   experience: readonly Experience[]
   education: readonly Education[]

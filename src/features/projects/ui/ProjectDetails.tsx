@@ -19,7 +19,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
     project
 
   const glance = [
-    { label: 'Role', value: project.role },
+    { label: 'Team', value: project.team },
+    { label: 'My role', value: project.role },
     { label: 'Duration', value: project.duration },
     { label: 'Context', value: project.context },
   ].filter((item) => item.value)
@@ -28,7 +29,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
     <article className={styles.page}>
       <PageHeader title={title}>
         <p className={styles.date}>
-          <time dateTime={date}>{formatYearMonth(date)}</time>
+          Started <time dateTime={date}>{formatYearMonth(date)}</time>
         </p>
         <p className={styles.summary}>{summary}</p>
 

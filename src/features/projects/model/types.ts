@@ -18,6 +18,7 @@ export interface ProjectData {
   featured?: boolean
   draft?: boolean
 
+  team?: string
   role?: string
   duration?: string
   context?: string
