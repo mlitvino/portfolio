@@ -3,13 +3,51 @@
   margin: 0 auto;
 }
 
-.summary {
-  margin: 0 0 1rem;
+/* Intro: photo next to name, tagline and CV button */
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.photo {
+  flex-shrink: 0;
+  width: 8rem;
+  height: 8rem;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.introName {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.introText {
+  margin: 0.25rem 0 1rem;
   color: var(--color-muted);
 }
 
-.cvAction {
-  margin-top: 1rem;
+@media (max-width: 30rem) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* My story */
+
+.story p {
+  margin: 0 0 1rem;
+}
+
+.story p:last-child {
+  margin-bottom: 0;
 }
 
 /* Sections */
@@ -70,8 +108,4 @@
 .highlights {
   margin: 0.25rem 0 0;
   padding-left: 1.25rem;
-}
-
-.details {
-  margin: 0;
 }

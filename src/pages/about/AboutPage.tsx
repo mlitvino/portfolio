@@ -8,13 +8,15 @@ import { ExperienceSection } from './sections/ExperienceSection'
 import { HobbiesSection } from './sections/HobbiesSection'
 import { LanguagesSection } from './sections/LanguagesSection'
 import { SkillsSection } from './sections/SkillsSection'
+import { StorySection } from './sections/StorySection'
 
 export default function AboutPage() {
   return (
     <div className={styles.page}>
       <title>{pageTitle('About')}</title>
 
-      <AboutHeader summary={resume.summary} cv={resume.cv} />
+      <AboutHeader intro={resume.intro} photo={resume.photo} cv={resume.cv} />
+      <StorySection paragraphs={resume.story} />
       <ExperienceSection items={resume.experience} />
       <EducationSection items={resume.education} />
       <SkillsSection groups={resume.skills} />

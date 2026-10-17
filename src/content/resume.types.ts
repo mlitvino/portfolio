@@ -16,7 +16,7 @@ export interface Education {
   location?: string
   start: YearMonth
   end?: YearMonth
-  details?: string
+  details?: readonly string[]
 }
 
 export interface SkillGroup {
@@ -43,7 +43,9 @@ export interface CvFile {
 
 export interface Resume {
   cv?: CvFile
-  summary: readonly string[]
+  photo?: string
+  intro: string
+  story: readonly string[]
   experience: readonly Experience[]
   education: readonly Education[]
   skills: readonly SkillGroup[]

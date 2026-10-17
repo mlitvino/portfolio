@@ -22,7 +22,11 @@ export function EducationSection({ items }: EducationSectionProps) {
               start={item.start}
               end={item.end}
             >
-              {item.details && <p className={styles.details}>{item.details}</p>}
+              {item.details && item.details.length > 0 && (
+                <ul className={styles.highlights}>
+                  {item.details.map((detail) => <li key={detail}>{detail}</li>)}
+                </ul>
+              )}
             </TimelineItem>
           </li>
         ))}
