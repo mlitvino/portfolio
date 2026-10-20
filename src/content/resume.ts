@@ -28,10 +28,10 @@ export const resume: Resume = {
       location: 'Helsinki, Finland',
       start: '2024-10',
       highlights: [
-        'Built personal projects, including a mobile expense tracker and an npm library for merging OpenAPI specifications',
+        'Built a mobile expense tracker and an npm library',
         'Contributed to an open-source movie tracker',
-        'Took part in the Junction 2025 hackathon, building an AI-powered security assessment tool in a team of five',
-        'Completed 12+ software engineering projects at Hive Helsinki, from low-level C/C++ to full-stack web apps',
+        'Built an AI security tool at the Junction 2025 hackathon',
+        'Completed 12+ projects at Hive Helsinki, from C to full-stack',
       ],
     },
     {
