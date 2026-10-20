@@ -22,13 +22,14 @@ export default {
   visuals: [
     {
       src: matches_screenshot,
-      alt: 'the matches page',
-      caption: 'the matches page',
+      alt:
+        'Matches page: Rock-Paper-Scissors results with dates, players and win, lose or tie, plus live, search and date filters',
+      caption: 'The matches page',
     },
     {
       src: leaderboard_screenshot,
-      alt: 'the leaderboard page',
-      caption: 'the leaderboard page',
+      alt: 'Leaderboard page: the top players by wins for a selected date range',
+      caption: 'The leaderboard',
     },
   ],
   overview: [

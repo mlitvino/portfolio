@@ -21,7 +21,8 @@ export default {
   visuals: [
     {
       src: screenshot,
-      alt: 'Running built-in commands',
+      alt:
+        'Minishell in a terminal: ls, echo with output redirection to a file, cat, and checking exit statuses with echo $? and exit',
       caption: 'Running built-in commands',
     },
   ],

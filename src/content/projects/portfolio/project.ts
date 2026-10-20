@@ -5,7 +5,7 @@ import screenshot from './portfolio.png'
 export default {
   title: 'Portfolio',
   summary:
-    'This site: a React single-page app with routing, light and dark themes, and automatic deploys to GitHub Pages.',
+    'This site: a React single-page app with animated themes and page transitions, built for accessibility and deployed automatically to GitHub Pages.',
   date: '2026-10-10',
   tech: ['React', 'TypeScript', 'Vite', 'React Router', 'GitHub Actions'],
   topics: ['Accessibility', 'DevOps', 'Theming'],
@@ -17,17 +17,18 @@ export default {
   featured: false,
 
   team: 'Solo',
-  duration: '1 week',
+  duration: '2 weeks',
   context: 'Personal project',
   visuals: [
     {
       src: screenshot,
-      alt: 'the home page in dark mode',
-      caption: 'the home page in dark mode',
+      alt: 'Portfolio home page in dark mode: name, title, an Open to work badge and a contact box',
+      caption: 'The home page in dark mode',
     },
   ],
   overview: [
-    'My personal portfolio, built from scratch as a single-page React app and hosted on GitHub Pages.',
+    'My personal portfolio, built from scratch as a single-page React app with TypeScript and hosted on GitHub Pages. Projects and resume content live in typed files, so adding a project means adding one folder.',
+    'I kept it light on dependencies: animations use browser APIs such as View Transitions instead of libraries, and every change goes through lint, format and build checks before it is deployed automatically.',
   ],
   features: [
     'Light and dark themes with a circle animation from the toggle, following the system setting',

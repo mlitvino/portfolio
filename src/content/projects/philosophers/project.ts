@@ -24,8 +24,9 @@ export default {
   visuals: [
     {
       src: screenshot,
-      alt: 'philosophers start eating',
-      caption: 'philosophers start eating',
+      alt:
+        'Terminal output of ./philo 4 600 200 200 1: timestamped messages as philosophers take forks, eat, sleep and think',
+      caption: 'Philosophers taking forks, eating and sleeping',
     },
   ],
   features: [

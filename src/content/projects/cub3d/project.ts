@@ -17,12 +17,14 @@ export default {
 
   team: '2 people',
   role: 'Graphics and rendering',
+  duration: '2 months',
   context: 'School project',
   visuals: [
     {
       src: screenshot,
-      alt: 'Main menu, ui, level',
-      caption: 'Main menu, ui, level',
+      alt:
+        'Collage: the Van Helsing main menu, a castle level with a minimap and health bar, and a forest level, both seen over a crossbow',
+      caption: 'Main menu and two levels',
     },
   ],
   overview: [

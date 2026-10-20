@@ -14,7 +14,6 @@ export const resume: Resume = {
   whatIDo: [
     'I build web and mobile apps end to end, from the database and API to the interface people actually use. My everyday stack is TypeScript, React, React Native, Node.js (NestJS, Fastify) and PostgreSQL.',
     'My foundation comes from Hive Helsinki, where I learned to program from the ground up in C and C++. Because of that, I like to understand how things work under the hood, not just that they work.',
-    "Before I wrote code, I spent two years in customer support and sales. That's where I learned to listen for the real problem behind a request, and it's still how I approach every feature I build.",
   ],
   background: [
     'I started out in customer support, working every day in a CRM that was harder to use than it needed to be and had its share of bugs. I kept thinking about how I would build it better.',
@@ -29,10 +28,10 @@ export const resume: Resume = {
       location: 'Helsinki, Finland',
       start: '2024-10',
       highlights: [
-        'Personal Projects — Mobile application and developer tool',
-        'Open Source Contributions — Movie tracker',
-        'Hackathons — Participant in Junction 2025',
-        'Hive Helsinki Projects — Completed 12+ practical software engineering projects',
+        'Built personal projects, including a mobile expense tracker and an npm library for merging OpenAPI specifications',
+        'Contributed to an open-source movie tracker',
+        'Took part in the Junction 2025 hackathon, building an AI-powered security assessment tool in a team of five',
+        'Completed 12+ software engineering projects at Hive Helsinki, from low-level C/C++ to full-stack web apps',
       ],
     },
     {
