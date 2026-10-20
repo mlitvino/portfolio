@@ -60,7 +60,7 @@ export const resume: Resume = {
         'Project-based peer-to-peer coding school',
         '18-month, full-time, on-site program',
         'Focused on low-level programming, algorithms and team collaboration',
-        'Completed 12 intensive programming projects',
+        'Completed 12+ intensive programming projects',
       ],
     },
     {
@@ -78,11 +78,11 @@ export const resume: Resume = {
   ],
 
   skills: [
-    { label: 'Languages', items: ['TypeScript', 'JavaScript', 'Go', 'C++', 'C'] },
+    { label: 'Languages', items: ['TypeScript', 'JavaScript', 'Go', 'C++', 'C', 'Python'] },
     { label: 'Frontend', items: ['React', 'React Native', 'Expo', 'HTML/CSS'] },
     { label: 'Backend', items: ['Node.js', 'NestJS', 'Fastify', 'Express'] },
     { label: 'Databases', items: ['PostgreSQL', 'MongoDB', 'TypeORM'] },
-    { label: 'Tools', items: ['Docker', 'Git', 'Vite', 'GitHub Actions', 'Make'] },
+    { label: 'Tools', items: ['Docker', 'Git', 'Nginx', 'Vite', 'GitHub Actions', 'Make'] },
     { label: 'Cloud', items: ['Hetzner', 'Google Cloud Platform (GCP)'] },
     { label: 'AI tools', items: ['GitHub Copilot', 'Codex', 'Claude Code'] },
   ],
