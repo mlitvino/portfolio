@@ -35,6 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className={styles.links}>
         {links.live && <ExternalLink href={links.live}>Live demo</ExternalLink>}
         {links.repo && <ExternalLink href={links.repo}>Source code</ExternalLink>}
+        {links.npm && <ExternalLink href={links.npm}>npm</ExternalLink>}
       </div>
     </article>
   )

@@ -14,6 +14,7 @@ export interface ProjectData {
   links: {
     live?: string
     repo?: string
+    npm?: string
   }
   featured?: boolean
   draft?: boolean

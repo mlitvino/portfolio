@@ -38,7 +38,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
           {topics && <TagList items={topics} label="Topics" />}
         </div>
 
-        {(links.live ?? links.repo) && (
+        {(links.live ?? links.repo ?? links.npm) && (
           <div className={styles.links}>
             {links.live && (
               <ExternalLink
@@ -52,6 +52,11 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
             {links.repo && (
               <ExternalLink href={links.repo} className={buttonStyles.button}>
                 Source code
+              </ExternalLink>
+            )}
+            {links.npm && (
+              <ExternalLink href={links.npm} className={buttonStyles.button}>
+                View on npm
               </ExternalLink>
             )}
           </div>
