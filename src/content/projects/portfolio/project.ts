@@ -5,13 +5,13 @@ import screenshot from './portfolio.png'
 export default {
   title: 'Portfolio',
   summary:
-    'This site: a React single-page app with animated themes and page transitions, built for accessibility and deployed automatically to GitHub Pages.',
+    'This site: a React single-page app with animated themes and page transitions, built for accessibility and deployed automatically to my own server in a Docker container.',
   date: '2026-10-10',
   tech: ['React', 'TypeScript', 'Vite', 'React Router', 'GitHub Actions'],
   topics: ['Accessibility', 'DevOps', 'Theming'],
   cover: screenshot,
   links: {
-    live: 'https://mlitvino.github.io/portfolio/',
+    live: 'https://mlitvino.dev/',
     repo: 'https://github.com/mlitvino/portfolio',
   },
   featured: false,

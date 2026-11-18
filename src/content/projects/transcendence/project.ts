@@ -23,7 +23,7 @@ export default {
   topics: ['Real-time', 'Game development', 'Security', 'DevOps', 'Microservices'],
   cover,
   links: {
-    live: 'https://valinor.ink/',
+    live: 'https://transcendence.mlitvino.dev/',
     repo: 'https://github.com/Transcendence-surprise/transcendence',
   },
   featured: true,
