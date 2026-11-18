@@ -1,0 +1,15 @@
+# Uploaded to ~/portfolio/compose.yml on the VPS by the deploy job (home folder of the SSH deploy user).
+# ~/portfolio/.env holds TAG=<image sha>; the deploy job updates it.
+name: portfolio
+
+services:
+  web:
+    image: ghcr.io/mlitvino/portfolio:${TAG}
+    restart: unless-stopped
+    networks:
+      edge_portfolio:
+        aliases: [portfolio-web]
+
+networks:
+  edge_portfolio:
+    external: true
